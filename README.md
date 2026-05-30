@@ -21,7 +21,7 @@ This MSc Dissertation project develops and evaluates multiple machine learning m
 ## Key Components
 
 ### 1. Data Collection & Preprocessing
-- Dataset: **ML-EdgeIIoT** — 157,800 instances, 63 features, 15 attack classes, 0 missing values
+- Dataset: **ML-EdgeIIoT** — 157,800 instances, 63 features, 15 attack classes, 0 missing values | [Download on Kaggle](https://www.kaggle.com/datasets/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot) | [IEEE DataPort](https://ieee-dataport.org/open-access/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications)
 - Applied data cleaning: dropped irrelevant columns, handled missing values, converted data types
 - Ensured dataset consistency and accuracy before modelling
 
@@ -110,6 +110,7 @@ jupyter notebook
 | `ML_Approaches_IoT-Real.pdf` | PDF export of the notebook |
 | `Machine_Learning_Approaches_for_Improv....pdf` | Full MSc Dissertation paper |
 | `Supporting Material.pdf` | Supporting data, flowcharts and confusion matrices |
+| `data/sample_data.csv` | Sample subset (1,000 rows) for quick testing — full dataset via Kaggle/IEEE DataPort |
 
 ---
 
@@ -129,5 +130,17 @@ jupyter notebook
 
 **Emmanuel Mologe** — MSc Internet of Things, Ulster University (Distinction, 2024)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/e-3bi-mol/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)]
+
+---
+
+## Dataset Citation
+
+If you use this project or the dataset, please cite the original paper:
+
+> M. A. Ferrag, O. Friha, D. Hamouda, L. Maglaras and H. Janicke, "Edge-IIoTset: A New Comprehensive Realistic Cyber Security Dataset of IoT and IIoT Applications for Centralized and Federated Learning," in *IEEE Access*, vol. 10, pp. 40281-40306, 2022. DOI: [10.1109/ACCESS.2022.3165809](https://doi.org/10.1109/ACCESS.2022.3165809)
+
+**Dataset available at:**
+- [Kaggle](https://www.kaggle.com/datasets/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot)
+- [IEEE DataPort](https://ieee-dataport.org/open-access/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications)(https://www.linkedin.com/in/e-3bi-mol/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/MannyMols)
