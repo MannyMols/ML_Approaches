@@ -21,14 +21,14 @@ This MSc Dissertation project develops and evaluates multiple machine learning m
 ## Key Components
 
 ### 1. Data Collection & Preprocessing
-- Utilised a comprehensive IoT network traffic dataset with attack labels
+- Dataset: **ML-EdgeIIoT** — 157,800 instances, 63 features, 15 attack classes, 0 missing values
 - Applied data cleaning: dropped irrelevant columns, handled missing values, converted data types
 - Ensured dataset consistency and accuracy before modelling
 
 ### 2. Feature Selection
 - **ANOVA F-test** and **Chi-Squared test** to identify the most significant features
 - **VarianceThreshold** to remove constant/low-variance features
-- Reduced dimensionality while retaining the most informative attributes
+- Top 18 features selected: `tcp.flags`, `mqtt.msgtype`, `tcp.ack`, `dns.qry.qu`, `tcp.seq` and others
 
 ### 3. Model Development
 - Trained and evaluated multiple ML classifiers:
@@ -55,21 +55,22 @@ This MSc Dissertation project develops and evaluates multiple machine learning m
 
 ## Results Summary
 
-| Model | Accuracy | Precision | Recall | F1-Score |
-|-------|----------|-----------|--------|----------|
-| Random Forest | High | High | High | High |
-| SVM | High | High | High | High |
-| KNN | High | High | High | High |
-| MLP | High | High | High | High |
-| Gradient Boosting | High | High | High | High |
-| Stacking Ensemble | Highest | Highest | Highest | Highest |
+| Model | Test Accuracy | Notes |
+|-------|--------------|-------|
+| **Gradient Boosting** | **92.0%** | Best overall performance |
+| **Random Forest** | **91.4%** | Strong F1 across most attack types |
+| Boosting (AdaBoost) | High | Competitive with ensemble peers |
+| Bagging | High | Reduced variance effectively |
+| Stacking | Moderate | Similar to KNN/MLP class-wise |
+| MLP | Moderate | Better than SVM on rare classes |
+| KNN | Moderate | Good multi-class handling |
+| SVM | Lower | F1 < 0.5 on Password, Uploading, XSS |
 
-> Note: Update this table with your actual metric values from the notebook output.
-
-**Key Achievements:**
-- Successfully identified critical features for IoT threat detection
-- Detected attacks including **DDoS, ransomware, and SQL injection** with high robustness
-- Established a scalable framework for real-time situational awareness and proactive threat mitigation
+**Key Findings:**
+- Ensemble methods (Gradient Boosting & Random Forest) achieved **F1-scores above 0.9** for: Backdoor, DDoS-TCP, DDoS-UDP, and Vulnerability Scanner attacks
+- All models struggled with rare attack classes: **Fingerprinting** and **MITM** (low recall & F1) due to class imbalance
+- SVM showed poor performance on Password, Uploading, and XSS attacks (**F1 < 0.5**)
+- Tree-based ensembles consistently outperformed individual classifiers across all metrics
 
 ---
 
@@ -108,7 +109,7 @@ jupyter notebook
 | `ML_Approaches_IoT-Real.ipynb` | Main Jupyter Notebook with full ML pipeline |
 | `ML_Approaches_IoT-Real.pdf` | PDF export of the notebook |
 | `Machine_Learning_Approaches_for_Improv....pdf` | Full MSc Dissertation paper |
-| `Supporting Material.pdf` | Supporting data and references |
+| `Supporting Material.pdf` | Supporting data, flowcharts and confusion matrices |
 
 ---
 
