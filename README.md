@@ -59,12 +59,12 @@ This MSc Dissertation project develops and evaluates multiple machine learning m
 |-------|--------------|-------|
 | **Gradient Boosting** | **92.0%** | Best overall performance |
 | **Random Forest** | **91.4%** | Strong F1 across most attack types |
-| Boosting (AdaBoost) | High | Competitive with ensemble peers |
-| Bagging | High | Reduced variance effectively |
-| Stacking | Moderate | Similar to KNN/MLP class-wise |
-| MLP | Moderate | Better than SVM on rare classes |
-| KNN | Moderate | Good multi-class handling |
-| SVM | Lower | F1 < 0.5 on Password, Uploading, XSS |
+| Boosting (AdaBoost) | **90.9** | Competitive with ensemble peers |
+| Bagging | **74.9** | Reduced variance effectively |
+| Stacking | **84.4** | Similar to KNN/MLP class-wise |
+| MLP | **82.2** | Better than SVM on rare classes |
+| KNN | **84.4** | Good multi-class handling |
+| SVM | **74.9** | F1 < 0.5 on Password, Uploading, XSS |
 
 **Key Findings:**
 - Ensemble methods (Gradient Boosting & Random Forest) achieved **F1-scores above 0.9** for: Backdoor, DDoS-TCP, DDoS-UDP, and Vulnerability Scanner attacks
